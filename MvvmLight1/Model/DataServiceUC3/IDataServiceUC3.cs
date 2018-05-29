@@ -7,7 +7,7 @@ namespace MvvmLight1.Model
 {
     public interface IDataServiceUC3
     {
-        void GetData(Action<DataItemUC3, Exception> callback);
+        void GetData(Action<DataItemUC3, DataItem, Exception> callback);
 
         void SetData(Action<DataItemUC3, Exception> callback);
 

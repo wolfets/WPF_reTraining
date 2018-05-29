@@ -56,23 +56,23 @@ namespace MvvmLight1.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModelUC3(IDataServiceUC3 dataService)
+        public MainViewModelUC3(IDataServiceUC3 dataService, IDataService dataServiceMain)
         {
             _dataService = dataService;
             _dataService.GetData(
-                (item, error) =>
+                (item, itemMain, error) =>
                 {
                     if (error != null)
                     {
                         // Report error here
                         return;
                     }
-
                     WelcomeTitle = item.Title;
-                    var diM = item.getDataItemMain();
-                    WelcomeTitle1 = "?????";
-                    if (diM!=null)
-                        WelcomeTitle1 = item.getDataItemMain().Title;
+                    WelcomeTitle1 = itemMain.Title;
+                    //var diM = item.getDataItemMain();
+                    //WelcomeTitle1 = "?????";
+                    //if (diM!=null)
+                    //    WelcomeTitle1 = item.getDataItemMain().Title;
                 });
 
 
