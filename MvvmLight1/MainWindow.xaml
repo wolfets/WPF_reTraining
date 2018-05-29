@@ -49,7 +49,7 @@
             </TabItem>
             <TabItem Header="TabItem">
                 <Grid Background="#FFE5E5E5">
-                    <local:UserControl2 Value="{Binding WelcomeTitle, Mode=TwoWay}" HorizontalAlignment="Left" Height="100" Margin="186,116,0,0" VerticalAlignment="Top" Width="100"/>
+                    <local:UserControl2 Value="{Binding WelcomeTitle, Mode=TwoWay}" HorizontalAlignment="Left" Height="100" Margin="30,116,0,0" VerticalAlignment="Top" Width="465"/>
                 </Grid>
             </TabItem>
         </TabControl>
