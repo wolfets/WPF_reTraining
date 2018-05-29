@@ -32,13 +32,13 @@ namespace MvvmLight1.ViewModel
             if (ViewModelBase.IsInDesignModeStatic)
             {
                 SimpleIoc.Default.Register<IDataService, Design.DesignDataService>();
-                SimpleIoc.Default.Register<IDataService2, Design.DesignDataService2>();
+                SimpleIoc.Default.Register<IDataServiceUC3, Design.DesignDataServiceUC3>();
 
             }
             else
             {
                 SimpleIoc.Default.Register<IDataService, DataService>();
-                SimpleIoc.Default.Register<IDataService2, DataService2>();
+                SimpleIoc.Default.Register<IDataServiceUC3, DataServiceUC3>();
             }
 
             SimpleIoc.Default.Register<MainViewModel>();

@@ -11,7 +11,7 @@ namespace MvvmLight1.ViewModel
     /// </summary>
     public class MainViewModelUC3 : ViewModelBase
     {
-        private readonly IDataService2 _dataService;
+        private readonly IDataServiceUC3 _dataService;
 
         /// <summary>
         /// The <see cref="WelcomeTitle" /> property's name.
@@ -19,6 +19,7 @@ namespace MvvmLight1.ViewModel
         public const string WelcomeTitlePropertyName = "WelcomeTitle2222";
 
         private string _welcomeTitle = string.Empty;
+        private string _welcomeTitle1 = string.Empty;
 
         /// <summary>
         /// Gets the WelcomeTitle property.
@@ -37,15 +38,25 @@ namespace MvvmLight1.ViewModel
 
             }
         }
+        public string WelcomeTitle1
+        {
+            get
+            {
+                return _welcomeTitle1;
+            }
+            set
+            {
+                Set(ref _welcomeTitle1, value);
+                RaisePropertyChanged("WelcomeTitle1");
 
-        public ModelObject model2 { get; set; }
-
+            }
+        }
 
 
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModelUC3(IDataService2 dataService)
+        public MainViewModelUC3(IDataServiceUC3 dataService)
         {
             _dataService = dataService;
             _dataService.GetData(
@@ -58,6 +69,10 @@ namespace MvvmLight1.ViewModel
                     }
 
                     WelcomeTitle = item.Title;
+                    var diM = item.getDataItemMain();
+                    WelcomeTitle1 = "?????";
+                    if (diM!=null)
+                        WelcomeTitle1 = item.getDataItemMain().Title;
                 });
 
 

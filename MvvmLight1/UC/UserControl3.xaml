@@ -4,20 +4,33 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvvmLight1.UC"
-             mc:Ignorable="d" Height="107.812" Width="498.75">
+             mc:Ignorable="d" Height="211.874" Width="502.5">
     <UserControl.DataContext>
         <Binding Path="UC3" Source="{StaticResource Locator}"/>
     </UserControl.DataContext>
 
 
     <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
         <TextBlock FontSize="36"
                    FontWeight="Bold"
                    Foreground="Purple"
                    Text="{Binding WelcomeTitle}"
+                   VerticalAlignment="top"
+                   HorizontalAlignment="left"
+                   TextWrapping="Wrap" Background="{DynamicResource Brush_vert}" Margin="0,0,0,0" Width="492" />
+
+        <TextBlock FontSize="36"
+                   FontWeight="Bold"
+                   Foreground="Purple"
+                   Text="{Binding WelcomeTitle1}"
                    VerticalAlignment="Bottom"
-                   HorizontalAlignment="Center"
-                   TextWrapping="Wrap" Background="{DynamicResource Brush_vert}" Margin="10,0,9.75,9.812" Width="479" Height="88" />
+                   HorizontalAlignment="left"
+                   TextWrapping="Wrap" Background="{DynamicResource Brush_vert}" Margin="0,0,0,0" Width="492" />
+
 
     </Grid>
 </UserControl>

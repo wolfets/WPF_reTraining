@@ -70,11 +70,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Design\DesignDataService2.cs" />
+    <Compile Include="Design\DesignDataServiceUC3.cs" />
     <Compile Include="Design\DesignDataService.cs" />
-    <Compile Include="Model\DataService2\DataItem2.cs" />
-    <Compile Include="Model\DataService2\DataService2.cs" />
-    <Compile Include="Model\DataService2\IDataService2.cs" />
+    <Compile Include="Model\DataServiceUC3\DataItemUC3.cs" />
+    <Compile Include="Model\DataServiceUC3\DataServiceUC3.cs" />
+    <Compile Include="Model\DataServiceUC3\IDataServiceUC3.cs" />
     <Compile Include="Model\DataService\DataItem.cs" />
     <Compile Include="Model\DataService\DataService.cs" />
     <Compile Include="Model\DataService\IDataService.cs" />
