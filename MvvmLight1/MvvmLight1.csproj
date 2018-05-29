@@ -148,7 +148,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SeperateWPFUserControl_Dll\SeperateWPFUserControl_Dll.csproj">
+    <ProjectReference Include="..\SeperateWPFUserControl_Dll\SeperateWPFUserControl_Dll.csproj">
       <Project>{4ce0dc81-58d3-4bcf-ac54-222d8381a597}</Project>
       <Name>SeperateWPFUserControl_Dll</Name>
     </ProjectReference>

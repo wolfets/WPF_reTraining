@@ -6,6 +6,7 @@
 
         xmlns:ignore="http://www.galasoft.ch/ignore"
         xmlns:UC="clr-namespace:MvvmLight1.UC"
+             xmlns:local="clr-namespace:MvvmLight1"
              x:Class="MvvmLight1.MainWindow"
 
         mc:Ignorable="d ignore"
@@ -47,7 +48,9 @@
                 </Grid>
             </TabItem>
             <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <local:UserControl2 HorizontalAlignment="Left" Height="100" Margin="186,116,0,0" VerticalAlignment="Top" Width="100"/>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>

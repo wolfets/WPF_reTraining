@@ -13,15 +13,15 @@
             <GradientStop Color="Black" Offset="1"/>
         </RadialGradientBrush>
     </UserControl.Resources>
-    <Grid DataContext="{Binding ElementName=parent}">
+    <Grid DataContext="{Binding ElementName=parent}" Margin="0,0,-8,0">
         <StackPanel Orientation="Horizontal"
-                Margin="0,5,0,0" Background="{DynamicResource Brush_circleYellow}">
+                Margin="0,5,10,0" Background="{DynamicResource Brush_circleYellow}">
             <TextBlock Text="{Binding Path=Label}"
                  Width="100"
                  Margin="3"
                  VerticalAlignment="Center" Background="#FFEEE81C"/>
             <TextBox Text="{Binding Path=Value, UpdateSourceTrigger=PropertyChanged}"
-               Width="290"
+               Width="287"
                Margin="3"/>
         </StackPanel>
     </Grid>
