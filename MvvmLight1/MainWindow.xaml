@@ -1,0 +1,64 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MvvmLight1;assembly="
+
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        xmlns:local1="clr-namespace:MvvmLight1"
+        xmlns:SeperateWPFUserControl_Dll="clr-namespace:SeperateWPFUserControl_Dll;assembly=SeperateWPFUserControl_Dll" x:Class="MvvmLight1.MainWindow"
+        mc:Ignorable="d ignore"
+        Height="539.17"
+        Width="793.968"
+        Title="MVVM Light Application"
+        >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <LinearGradientBrush x:Key="Brush_BlackRed" EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFD34343" Offset="0.343"/>
+                <GradientStop Color="#FF851F1F" Offset="1"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <Binding Path="Main" Source="{StaticResource Locator}"/>
+    </Window.DataContext>
+
+    <Grid x:Name="LayoutRoot" Margin="0,10,1.968,-58.83" Height="557" VerticalAlignment="Top">
+        <TextBlock FontSize="36"
+                   FontWeight="Bold"
+                   Foreground="Purple"
+                   Text="{Binding WelcomeTitle}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap" Background="{DynamicResource Brush_vert}" Margin="0,88,14,-179" Height="120" />
+
+        <local1:UserControl2 Value="{Binding WelcomeTitle, Mode=TwoWay}" HorizontalAlignment="Left" Height="67" Margin="10,143,0,0" VerticalAlignment="Top" Width="410"/>
+        <TextBox Text="{Binding WelcomeTitle, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Foreground="Black" Background="{DynamicResource Brush_beige}" Margin="0,433,0,0" Height="45" VerticalAlignment="Top"/>
+
+        <local1:FieldUserControl VerticalAlignment="Top"
+                              Label="{Binding WelcomeTitle}"
+                              Value="{Binding WelcomeTitle, Mode=TwoWay}" Height="66" Margin="0,0,0,-37" Background="{DynamicResource Brush_BlackRed}"/>
+
+
+        <Label Content="{Binding model2.Height}" Margin="0,50,100,52" Height="20" Background="Aqua"/>
+        <SeperateWPFUserControl_Dll:UserControl1 
+            Label="Separated UserControl" 
+            Value="{Binding WelcomeTitle, Mode=TwoWay}" HorizontalAlignment="Left" Height="55" Margin="10,293,0,0" VerticalAlignment="Top" Width="542" RenderTransformOrigin="0.5,0.5">
+            <SeperateWPFUserControl_Dll:UserControl1.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.374"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </SeperateWPFUserControl_Dll:UserControl1.RenderTransform>
+        </SeperateWPFUserControl_Dll:UserControl1>
+    </Grid>
+</Window>

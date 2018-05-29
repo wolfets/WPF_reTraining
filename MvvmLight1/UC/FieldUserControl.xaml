@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="MvvmLight1.FieldUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Name="parent"
+    d:DesignHeight="50" d:DesignWidth="400">
+    <UserControl.Resources>
+        <RadialGradientBrush x:Key="Brush_circleYellow">
+            <GradientStop Color="Black" Offset="1"/>
+            <GradientStop Color="#FFD3CF42" Offset="0.333"/>
+            <GradientStop Color="Black" Offset="1"/>
+        </RadialGradientBrush>
+    </UserControl.Resources>
+    <Grid DataContext="{Binding ElementName=parent}">
+        <StackPanel Orientation="Horizontal"
+                Margin="0,5,0,0" Background="{DynamicResource Brush_circleYellow}">
+            <TextBlock Text="{Binding Path=Label}"
+                 Width="100"
+                 Margin="3"
+                 VerticalAlignment="Center" Background="#FFEEE81C"/>
+            <TextBox Text="{Binding Path=Value, UpdateSourceTrigger=PropertyChanged}"
+               Width="290"
+               Margin="3"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
