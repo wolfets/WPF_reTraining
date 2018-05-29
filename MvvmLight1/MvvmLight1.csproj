@@ -71,6 +71,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Design\DesignDataService.cs" />
+    <Compile Include="Model\DataService2\DataItem2.cs" />
+    <Compile Include="Model\DataService2\DataService2.cs" />
+    <Compile Include="Model\DataService2\IDataService2.cs" />
     <Compile Include="Model\DataService\DataItem.cs" />
     <Compile Include="Model\DataService\DataService.cs" />
     <Compile Include="Model\DataService\IDataService.cs" />
@@ -81,6 +84,10 @@
     <Compile Include="UC\UserControl2.xaml.cs">
       <DependentUpon>UserControl2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UC\UserControlBinding.xaml.cs">
+      <DependentUpon>UserControlBinding.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\MainViewModel2.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
@@ -106,6 +113,10 @@
     <Page Include="UC\UserControl2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UC\UserControlBinding.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
