@@ -32,13 +32,18 @@ namespace MvvmLight1.ViewModel
             if (ViewModelBase.IsInDesignModeStatic)
             {
                 SimpleIoc.Default.Register<IDataService, Design.DesignDataService>();
+                SimpleIoc.Default.Register<IDataService2, Design.DesignDataService2>();
+
             }
             else
             {
                 SimpleIoc.Default.Register<IDataService, DataService>();
+                SimpleIoc.Default.Register<IDataService2, DataService2>();
             }
 
             SimpleIoc.Default.Register<MainViewModel>();
+
+            SimpleIoc.Default.Register<MainViewModelUC3>();
         }
 
         /// <summary>
@@ -52,6 +57,13 @@ namespace MvvmLight1.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
+            }
+        }
+        public MainViewModelUC3 UC3
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MainViewModelUC3>();
             }
         }
 

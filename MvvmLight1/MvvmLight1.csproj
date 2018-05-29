@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Design\DesignDataService2.cs" />
     <Compile Include="Design\DesignDataService.cs" />
     <Compile Include="Model\DataService2\DataItem2.cs" />
     <Compile Include="Model\DataService2\DataService2.cs" />
@@ -84,10 +85,13 @@
     <Compile Include="UC\UserControl2.xaml.cs">
       <DependentUpon>UserControl2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UC\UserControl3.xaml.cs">
+      <DependentUpon>UserControl3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UC\UserControlBinding.xaml.cs">
       <DependentUpon>UserControlBinding.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\MainViewModel2.cs" />
+    <Compile Include="ViewModel\MainViewModelUC3.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
@@ -114,6 +118,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UC\UserControl3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UC\UserControlBinding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,6 +146,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\MvvmLight1.ViewModel.MainViewModelUC3.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

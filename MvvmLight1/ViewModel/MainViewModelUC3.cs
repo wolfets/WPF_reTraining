@@ -9,7 +9,7 @@ namespace MvvmLight1.ViewModel
     /// See http://www.mvvmlight.net
     /// </para>
     /// </summary>
-    public class MainViewModel2 : ViewModelBase
+    public class MainViewModelUC3 : ViewModelBase
     {
         private readonly IDataService2 _dataService;
 
@@ -45,7 +45,7 @@ namespace MvvmLight1.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel2(IDataService2 dataService)
+        public MainViewModelUC3(IDataService2 dataService)
         {
             _dataService = dataService;
             _dataService.GetData(
