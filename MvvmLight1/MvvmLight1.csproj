@@ -71,9 +71,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Design\DesignDataService.cs" />
-    <Compile Include="Model\DataItem.cs" />
-    <Compile Include="Model\DataService.cs" />
-    <Compile Include="Model\IDataService.cs" />
+    <Compile Include="Model\DataService\DataItem.cs" />
+    <Compile Include="Model\DataService\DataService.cs" />
+    <Compile Include="Model\DataService\IDataService.cs" />
     <Compile Include="Model\ModelObject.cs" />
     <Compile Include="UC\FieldUserControl.xaml.cs">
       <DependentUpon>FieldUserControl.xaml</DependentUpon>
