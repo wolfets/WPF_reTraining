@@ -9,7 +9,7 @@ namespace MvvmLight1.Model
     {
         void GetData(Action<DataItemUC3, Exception> callback);
 
-        void SetData(Action<DataItemUC3, Exception> callback);
+        void SetData(string diTitle, Action<DataItemUC3, Exception> callback);
 
     }
 }

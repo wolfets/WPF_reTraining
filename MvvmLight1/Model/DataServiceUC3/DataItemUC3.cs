@@ -15,17 +15,17 @@
         }
 
 
-        private DataItem DIMain
-        {
-            get; set;
-        }
-        public void setDataItemMain(DataItem diMain)
-        {
-            DIMain = DIMain;
-        }
-        public DataItem getDataItemMain()
-        {
-            return DIMain;
-        }
+        //private DataItem DIMain
+        //{
+        //    get; set;
+        //}
+        //public void setDataItemMain(DataItem diMain)
+        //{
+        //    DIMain = DIMain;
+        //}
+        //public DataItem getDataItemMain()
+        //{
+        //    return DIMain;
+        //}
     }
 }

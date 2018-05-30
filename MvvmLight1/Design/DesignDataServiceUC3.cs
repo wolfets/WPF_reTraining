@@ -13,9 +13,11 @@ namespace MvvmLight1.Design
             callback(item, null);
         }
 
-        public void SetData(Action<DataItemUC3, Exception> callback)
+        public void SetData(string diTitle, Action<DataItemUC3, Exception> callback)
         {
-            throw new NotImplementedException();
+            var item2 = new DataItemUC3(diTitle);
+            callback(item2, null);
+            //throw new NotImplementedException();
         }
     }
 }
