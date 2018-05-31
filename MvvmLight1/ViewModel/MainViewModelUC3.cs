@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using Microsoft.Practices.ServiceLocation;
 using MvvmLight1.Model;
 
 namespace MvvmLight1.ViewModel
@@ -12,6 +13,8 @@ namespace MvvmLight1.ViewModel
     public class MainViewModelUC3 : ViewModelBase
     {
         private readonly IDataServiceUC3 _dataService;
+
+        //public MainViewModel vmMain;
 
         /// <summary>
         /// The <see cref="WelcomeTitle" /> property's name.
@@ -42,11 +45,14 @@ namespace MvvmLight1.ViewModel
         {
             get
             {
-                return _welcomeTitle1;
+                MainViewModel vmMain = ServiceLocator.Current.GetInstance<MainViewModel>();
+                return vmMain.WelcomeTitle;
             }
             set
             {
                 Set(ref _welcomeTitle1, value);
+                //if (vmMain!=null)
+                //    vmMain.WelcomeTitle = value;
                 RaisePropertyChanged("WelcomeTitle1");
 
             }
@@ -56,9 +62,14 @@ namespace MvvmLight1.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
+<<<<<<< HEAD
         public MainViewModelUC3(IDataServiceUC3 dataService, IDataService dataServiceMain)
+=======
+        public MainViewModelUC3(IDataServiceUC3 dataServiceUC3, IDataService dataServiceMain)
+>>>>>>> c7bf47f347f3d01c4f0d392bbf25547564c1da07
         {
-            _dataService = dataService;
+            _dataService = dataServiceUC3;
+            DataItem _di = new DataItem("Di créé par..... DIUC3");
             _dataService.GetData(
                 (item, itemMain, error) =>
                 {
@@ -68,7 +79,10 @@ namespace MvvmLight1.ViewModel
                         return;
                     }
                     WelcomeTitle = item.Title;
+<<<<<<< HEAD
                     WelcomeTitle1 = itemMain.Title;
+=======
+>>>>>>> c7bf47f347f3d01c4f0d392bbf25547564c1da07
                     //var diM = item.getDataItemMain();
                     //WelcomeTitle1 = "?????";
                     //if (diM!=null)
@@ -76,11 +90,16 @@ namespace MvvmLight1.ViewModel
                 });
 
 
-            var model2 = new ModelObject()
-            {
-                Shoesize = 12,
-                Height = 34.5
-            };
+            ////------au moment de la réception du message ...on maj
+            //_dataService.SetData(_di.Title, (item, error) =>
+            //{
+            //    WelcomeTitle = item.Title;
+            //});
+            //var model2 = new ModelObject()
+            //{
+            //    Shoesize = 12,
+            //    Height = 34.5
+            //};
         }
 
         ////public override void Cleanup()

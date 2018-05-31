@@ -63,7 +63,10 @@ namespace MvvmLight1.ViewModel
         {
             get
             {
-                return ServiceLocator.Current.GetInstance<MainViewModelUC3>();
+                //MainViewModel vmMain = ServiceLocator.Current.GetInstance<MainViewModel>();
+                MainViewModelUC3 vmUC3 = ServiceLocator.Current.GetInstance<MainViewModelUC3>();
+                //vmUC3.vmMain = vmMain;
+                return vmUC3;
             }
         }
 
