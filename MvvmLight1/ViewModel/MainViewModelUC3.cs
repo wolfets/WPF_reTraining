@@ -62,11 +62,7 @@ namespace MvvmLight1.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-<<<<<<< HEAD
-        public MainViewModelUC3(IDataServiceUC3 dataService, IDataService dataServiceMain)
-=======
         public MainViewModelUC3(IDataServiceUC3 dataServiceUC3, IDataService dataServiceMain)
->>>>>>> c7bf47f347f3d01c4f0d392bbf25547564c1da07
         {
             _dataService = dataServiceUC3;
             DataItem _di = new DataItem("Di créé par..... DIUC3");
@@ -79,10 +75,6 @@ namespace MvvmLight1.ViewModel
                         return;
                     }
                     WelcomeTitle = item.Title;
-<<<<<<< HEAD
-                    WelcomeTitle1 = itemMain.Title;
-=======
->>>>>>> c7bf47f347f3d01c4f0d392bbf25547564c1da07
                     //var diM = item.getDataItemMain();
                     //WelcomeTitle1 = "?????";
                     //if (diM!=null)
