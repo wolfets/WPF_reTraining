@@ -67,14 +67,13 @@ namespace MvvmLight1.ViewModel
             _dataService = dataServiceUC3;
             DataItem _di = new DataItem("Di créé par..... DIUC3");
             _dataService.GetData(
-                (item, error) =>
+                (item, itemMain, error) =>
                 {
                     if (error != null)
                     {
                         // Report error here
                         return;
                     }
-
                     WelcomeTitle = item.Title;
                     //var diM = item.getDataItemMain();
                     //WelcomeTitle1 = "?????";
