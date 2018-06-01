@@ -1,2 +1,5 @@
 obj/
 bin/
+.vs/MvvmLight1/v15/.suo
+.vs/MvvmLight1/v15/Server/sqlite3/storage.ide-shm
+.vs/MvvmLight1/v15/Server/sqlite3/storage.ide-wal
