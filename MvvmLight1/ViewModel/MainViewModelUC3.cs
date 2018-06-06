@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using Microsoft.Practices.ServiceLocation;
+using MvvmLight1.Messages;
 using MvvmLight1.Model;
 
 namespace MvvmLight1.ViewModel
@@ -92,6 +93,15 @@ namespace MvvmLight1.ViewModel
             //    Shoesize = 12,
             //    Height = 34.5
             //};
+
+            //----messages 
+            Messenger.Default.Register<StatusMessage>(this, (e) =>
+            {
+                WelcomeTitle1 = e.Message;
+            });
+
+
+
         }
 
         ////public override void Cleanup()

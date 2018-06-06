@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,13 @@ using System.Threading.Tasks;
 
 namespace MvvmLight1.Messages
 {
-    public class StatusMessage
+    public class StatusMessage : MessageBase
     {
-        public StatusMessage(
-          string status,
-          int timeoutMilliseconds)
+        public StatusMessage(string message)
         {
-            Status = status;
-            TimeoutMilliseconds = timeoutMilliseconds;
+            Message = message;
         }
-        public string Status
-        {
-            get; private set;
-        }
-        public int TimeoutMilliseconds
+        public string Message
         {
             get; private set;
         }

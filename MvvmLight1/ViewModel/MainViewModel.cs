@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using MvvmLight1.Messages;
 using MvvmLight1.Model;
 
 namespace MvvmLight1.ViewModel
@@ -35,6 +36,7 @@ namespace MvvmLight1.ViewModel
                 Set(ref _welcomeTitle, value);
                 RaisePropertyChanged("WelcomeTitle");
 
+                Messenger.Default.Send<StatusMessage>(new StatusMessage(value));
             }
         }
 

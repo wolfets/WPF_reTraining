@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvvmLight1.Messages;
+using System;
 
 namespace MvvmLight1.Model
 {
@@ -12,6 +13,7 @@ namespace MvvmLight1.Model
             item2 = new DataItemUC3("DataServiceUC3");
             var itemMain = new DataItem("DataServiceMain créé par UC3");
             callback(item2, itemMain, null);
+
         }
 
         public void SetData(string diTitle, Action<DataItemUC3, Exception> callback)
