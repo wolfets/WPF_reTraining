@@ -1,6 +1,12 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using MvvmLight1.Messages;
 using MvvmLight1.Model;
+using System.IO;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace MvvmLight1.ViewModel
 {
@@ -69,6 +75,52 @@ namespace MvvmLight1.ViewModel
                 Height = 34.5
             };
         }
+
+
+        RelayCommand _btnT92;
+        public ICommand BtnT92
+        {
+            get
+            {
+                if (_btnT92 == null)
+                {
+                    _btnT92 = new RelayCommand(() =>
+                    {
+                        MessageBoxResult result = MessageBox.Show("Charge(_dataService, 4) ?", "Traitement", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        if (result == MessageBoxResult.Yes)
+                        {
+
+                            WelcomeTitle = "réinit du message";
+                            //Messenger.Default.Send<StatusMessage>(new StatusMessage("réinit du message"));
+
+
+
+                            //////File.Delete(fichierFinTraitementT4);
+
+                            //timerT = new System.Timers.Timer();
+                            //timerT.Elapsed += new System.Timers.ElapsedEventHandler(tickT9);
+                            //timerT.Interval = 1000;
+                            //timerT.Start();
+                            //var uiContext = TaskScheduler.Default;// FromCurrentSynchronizationContext();
+                            //http://blogs.msdn.com/b/pfxteam/archive/2011/10/24/10229468.aspx
+                            //Task.Factory.StartNew(() =>
+                            //{
+                            //    //-------------------- 
+                            //    //Charge(4);
+                            //    ///////////////////LoadFichierT9();
+                            //    Messenger.Default.Send<StatusMessage>(new StatusMessage("réinit du message"));
+
+                            //    return true;
+                            //}, CancellationToken.None, TaskCreationOptions.LongRunning, uiContext);
+                        }
+                    }, () => { return true; });
+                }
+                return _btnT92;
+            }
+        }
+
+
+
 
         ////public override void Cleanup()
         ////{
