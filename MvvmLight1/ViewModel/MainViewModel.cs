@@ -7,6 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Threading;
 
 namespace MvvmLight1.ViewModel
 {
@@ -77,6 +78,9 @@ namespace MvvmLight1.ViewModel
         }
 
 
+
+
+
         RelayCommand _btnT92;
         public ICommand BtnT92
         {
@@ -92,6 +96,25 @@ namespace MvvmLight1.ViewModel
 
                             WelcomeTitle = "réinit du message";
                             //Messenger.Default.Send<StatusMessage>(new StatusMessage("réinit du message"));
+
+                            //this.Dispatcher.Invoke(DispatcherPriority.Background,
+                            //     new Action<object>(SetStatus),
+                            //     new object[2] { tir, listeComb });
+                            //private void SetStatus(object xxx)
+                            //{
+                            //    //object[] xxxs = (object[])xxx;
+                            //    //Tirage tir = (Tirage)xxxs[0];
+                            //    //label1.Content = tir.Id.ToString() + "   " + ((List<string>)xxxs[1]).Count.ToString();
+                            //    if (label1 != null)
+                            //    {
+                            //        object[] xxxs = (object[])xxx;
+                            //        string tir = (string)xxxs[0];
+                            //        label1.Content = tir.ToString() + "   " + ((List<string>)xxxs[1]).Count.ToString();
+                            //    }
+                            //}
+
+
+
 
 
 
