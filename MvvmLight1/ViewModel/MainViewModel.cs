@@ -143,15 +143,15 @@ namespace MvvmLight1.ViewModel
         }
 
 
-        public async Task<string> ReadFile(string filepath)
-        {
-            await {
-                using (var reader = new StreamReader(filepath))
-                {
-                    return reader.ReadToEnd();
-                }
-            }
-        }
+        //public async Task<string> ReadFile(string filepath)
+        //{
+        //    await {
+        //        using (var reader = new StreamReader(filepath))
+        //        {
+        //            return reader.ReadToEnd();
+        //        }
+        //    }
+        //}
 
         ////public override void Cleanup()
         ////{

@@ -78,7 +78,7 @@
     <Compile Include="Model\DataServiceUC3\IDataServiceUC3.cs" />
     <Compile Include="Model\DataService\DataItem.cs" />
     <Compile Include="Model\DataService\DataService.cs" />
-    <Compile Include="Messages\IDataService.cs" />
+    <Compile Include="Model\DataService\IDataService.cs" />
     <Compile Include="Model\DataService\Messenger.cs" />
     <Compile Include="Model\ModelObject.cs" />
     <Compile Include="UC\FieldUserControl.xaml.cs">

@@ -97,6 +97,7 @@ namespace MvvmLight1.ViewModel
             //----messages 
             Messenger.Default.Register<StatusMessage>(this, (e) =>
             {
+                WelcomeTitle = e.Message;
                 WelcomeTitle1 = e.Message;
             });
 
