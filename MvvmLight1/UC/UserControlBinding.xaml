@@ -7,36 +7,37 @@
         xmlns:local1="clr-namespace:MvvmLight1"
         xmlns:local2="clr-namespace:MvvmLight1;assembly="
         xmlns:SeperateWPFUserControl_Dll="clr-namespace:SeperateWPFUserControl_Dll;assembly=SeperateWPFUserControl_Dll" 
-             mc:Ignorable="d" Height="304.112" Width="413.094">
-    <Grid Margin="0,0,0,0">
-        <TextBlock FontSize="36"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="UserControlBinding" Margin="0,0,-0.506,0" Height="16" VerticalAlignment="Top"></TextBlock>
+
+            <TextBlock FontSize="36"
                    FontWeight="Bold"
-                   Foreground="Purple"
                    Text="{Binding WelcomeTitle}"
                    VerticalAlignment="Bottom"
                    HorizontalAlignment="Center"
-                   TextWrapping="Wrap" Background="{DynamicResource Brush_vert}" Margin="0,88,14,179" />
+                   TextWrapping="Wrap" Background="{DynamicResource Brush_vert}" />
 
-        <local1:UserControl2 Value="{Binding WelcomeTitle, Mode=TwoWay}" HorizontalAlignment="Left" Height="67" Margin="10,143,0,0" VerticalAlignment="Top" Width="280"/>
-        <TextBox Text="{Binding WelcomeTitle, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Foreground="Black" Background="{DynamicResource Brush_beige}" Margin="10,256,10,0" Height="44" VerticalAlignment="Top"/>
+            <local1:UserControl2 Value="{Binding WelcomeTitle, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,0,0,153.512" Width="280" Height="67" VerticalAlignment="Bottom"/>
+            <TextBox Text="{Binding WelcomeTitle, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Foreground="Black" Background="{DynamicResource Brush_beige}" Margin="10,0,10.294,10.712" Height="54" VerticalAlignment="Bottom"/>
 
-        <local1:FieldUserControl VerticalAlignment="Top"
+            <local1:FieldUserControl
                               Label="{Binding WelcomeTitle}"
-                              Value="{Binding WelcomeTitle, Mode=TwoWay}" Height="66" Margin="0,0,10,0" Background="{DynamicResource Brush_BlackRed}"/>
-
-
-        <Label Content="{Binding model2.Height}" Margin="0,118,100,162" Height="20" Background="Aqua"/>
-        <SeperateWPFUserControl_Dll:UserControl1 
+                              Value="{Binding WelcomeTitle, Mode=TwoWay}" Background="{DynamicResource Brush_vert}" BorderBrush="{DynamicResource Brush_beige}"/>
+            <Label Content="{Binding model2.Height}" Height="20" Background="Aqua" VerticalAlignment="Bottom"/>
+            <SeperateWPFUserControl_Dll:UserControl1 
             Label="Separated UserControl" 
-            Value="{Binding WelcomeTitle, Mode=TwoWay}" Height="55" Margin="11,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="286">
-            <SeperateWPFUserControl_Dll:UserControl1.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.374"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </SeperateWPFUserControl_Dll:UserControl1.RenderTransform>
-        </SeperateWPFUserControl_Dll:UserControl1>
+            Value="{Binding WelcomeTitle, Mode=TwoWay}" HorizontalAlignment="Left" Width="286" Background="{DynamicResource Brush_beige}" Height="49" VerticalAlignment="Bottom">
+                <SeperateWPFUserControl_Dll:UserControl1.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.374"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </SeperateWPFUserControl_Dll:UserControl1.RenderTransform>
+            </SeperateWPFUserControl_Dll:UserControl1>
+        </StackPanel>
     </Grid>
 </UserControl>

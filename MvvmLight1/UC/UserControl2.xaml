@@ -7,10 +7,11 @@
     x:Name="parent"
     d:DesignHeight="50" d:DesignWidth="400">
     
-    <Grid DataContext="{Binding ElementName=parent}">
+    <Grid DataContext="{Binding ElementName=parent}" Margin="0,0,0,-18">
         <StackPanel Orientation="Vertical"
                 Background="#EEE"
                 Margin="0,5,0,0">
+            <TextBlock Text="UserControl2"></TextBlock>
             <TextBlock Text="Binding Path=Label"
                  Margin="3"
                  VerticalAlignment="Center" Background="{DynamicResource Brush_vert}"/>

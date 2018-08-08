@@ -10,9 +10,7 @@
              x:Class="MvvmLight1.MainWindow"
 
         mc:Ignorable="d ignore"
-        Height="539.17"
-        Width="793.968"
-        Title="MVVM Light Application"
+        Title="MVVM Light Application" d:DesignWidth="840" d:DesignHeight="863.8"
         >
 
     <Window.Resources>
@@ -31,42 +29,34 @@
         <Binding Path="Main" Source="{StaticResource Locator}"/>
     </Window.DataContext>
 
-    <Grid x:Name="LayoutRoot" Margin="0,10,1.968,-58.83" Height="557" VerticalAlignment="Top">
-        <TextBlock FontSize="36"
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Orientation="Vertical">
+            <TextBlock FontSize="36"
                    FontWeight="Bold"
                    Foreground="Purple"
                    Text="{Binding WelcomeTitle}"
                    VerticalAlignment="Bottom"
                    HorizontalAlignment="Center"
-                   TextWrapping="Wrap" Background="{DynamicResource Brush_vert}" Margin="0,0,9.6,499" Width="776" />
+                   TextWrapping="Wrap" Background="{DynamicResource Brush_vert}"  />
 
-        <TabControl Margin="0,82,-0.4,0" >
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5">
-                    <UC:UserControlBinding HorizontalAlignment="Left" Margin="0,16,0,112.8" Width="717" RenderTransformOrigin="0.5,0.5" >
-                        <UC:UserControlBinding.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform AngleY="-0.288"/>
-                                <RotateTransform/>
-                                <TranslateTransform Y="-1.595"/>
-                            </TransformGroup>
-                        </UC:UserControlBinding.RenderTransform>
-                    </UC:UserControlBinding>
-                    <Button Content="Button" Command="{Binding BtnT92}" HorizontalAlignment="Left" Margin="611,43,0,0" VerticalAlignment="Top" Width="75"/>
-
-
-                </Grid>
-            </TabItem>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <UC:UserControl3 ValueDIMain="{Binding Path=.}"  HorizontalAlignment="Left" Height="206" Margin="30,10,0,0" VerticalAlignment="Top" Width="465" Grid.ColumnSpan="2"/>
-                </Grid>
-            </TabItem>
-        </TabControl>
+            <TabControl>
+                <TabItem Header="TabItem">
+                    <Grid Background="#FFE5E5E5" >
+                        <UC:UserControlBinding HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" >
+                        </UC:UserControlBinding>
+                        <Button Content="Button" Command="{Binding BtnT92}" HorizontalAlignment="Left" Margin="646,24,0,0" VerticalAlignment="Top" Width="75"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="TabItem">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <UC:UserControl3 ValueDIMain="{Binding Path=.}"  HorizontalAlignment="Left" Height="206" Margin="30,10,0,0" VerticalAlignment="Top" Width="465" Grid.ColumnSpan="2"/>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </StackPanel>
     </Grid>
 </Window>
